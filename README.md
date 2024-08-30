@@ -16,6 +16,8 @@
 给终端设置辅助权限，路径：设置 -> 隐私与安全 -> 辅助功能 -> 终端
 ![img_2.png](img_2.png)
 
+⚠️：为了安全起见，当不需要使用该脚本后建议关掉。
+
 ## 3. 下载 auto_click_single.sh 脚本
 
 在终端中输入（也可以直接使用 git 下载源码，这里就不赘述了）
@@ -23,6 +25,7 @@
 ```shell
 curl -O https://github.com/11001100111011101110001/auto_click/blob/main/auto_click_single.sh
 ```
+⚠️：如果没有切换到其他文件夹下，文件路径默认为：/Users/用户名/auto_click_single.sh ，这里的用户名等于当前 Mac 登陆的用户设定的名字。
 
 ## 4. 在终端中给脚本赋予执行权限
 
