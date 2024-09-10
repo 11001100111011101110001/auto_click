@@ -1,31 +1,30 @@
 #!/bin/bash
 
-# 检查是否提供了参数
-# 参数一：横坐标；
-# 参数二: 纵坐标;
-# 参数三：点击次数；
-# 参数四：点击频率；
-if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
-  echo "Usage: $0 <x> <y> <clicks> <frequency>"
-  exit 1
-fi
+# 提示用户点击鼠标
+echo "Please move the mouse to the position you want to click, then press the Enter key to get the mouse coordinates.";
+read -r -p "请将鼠标移至需要点击的位置，然后按下回车键获取鼠标坐标。";
 
-# 定义要点击的坐标
-x=$1
-y=$2
+# 获取当前鼠标位置
+mouse_position=$(cliclick p);
 
-# 定义点击次数
-clicks=$3
+# 输出鼠标位置
+echo "Current mouse coordinates: $mouse_position";
+echo "当前鼠标坐标: $mouse_position";
 
-# 定义点击间隔
-frequency=$4
+# 提示输入点击次数
+echo "Please enter the number of clicks.";
+read -r -p "请输入点击次数：" clicks;
 
 # 循环点击指定的次数
-echo "开始点击"
-for i in $(seq 1 $clicks); do
-    # 使用 cliclick 执行点击
-    cliclick c:$x,$y
-    # 添加延迟，避免点击过快
-    sleep $frequency
+echo "Please enter the click time interval in seconds.";
+read -r -p "请输入点击间隔时间，以秒为单位：" interval;
+
+echo "Clicking...";
+echo "点击中...";
+for i in $(seq 1 $clicks);
+do
+    cliclick c:$mouse_position;
+    sleep $interval;
 done
-echo "任务完成"
+echo "Task completed.";
+echo "任务完成～";
