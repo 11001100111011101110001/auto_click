@@ -41,12 +41,42 @@ chmod +x auto_click_single.sh
 
 ## 6. 执行脚本
 
-```shell
-# 语法
-./auto_click_single.sh 横坐标 纵坐标 点击次数 点击间隔（秒）
+> 执行脚本后根据引导操作即可
 
-# 例如：./auto_click_single.sh 1500 600 755 0.2
-# 含义：点击横坐标 1500 纵坐标 600 的地方 755 下，每下「间隔 0.2 秒」。
+执行步骤：
+1. 运行脚本。
+2. 将鼠标移至需要点击的位置，然后按下回车键获取鼠标坐标。
+3. 输入点击次数。
+4. 输入每次点击的间隔，单位：秒。
+
+完成以上操作后就会自动开始点击。
+
+举个例子：
+```shell
+# 运行脚本
+./auto_click_single.sh
+
+# 根据提示操作
+Please move the mouse to the position you want to click, then press the Enter key to get the mouse coordinates.
+请将鼠标移至需要点击的位置，然后按下回车键获取鼠标坐标。
+
+# 回车后会显示坐标信息
+Current mouse coordinates: 2811,1163
+当前鼠标坐标: 2811,1163
+
+# 根据提示输入点击次数
+Please enter the number of clicks.
+请输入点击次数：1030
+
+# 输入点击间隔
+Please enter the click time interval in seconds.
+请输入点击间隔时间，以秒为单位：0.05         
+
+Clicking...
+点击中...
+
+Task completed.
+任务完成～
 ```
 
 ## 7. 注意事项
