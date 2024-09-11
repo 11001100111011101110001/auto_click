@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# 提示用户点击鼠标
 echo "Please move the mouse to the position you want to click, then press the Enter key to get the mouse coordinates.";
 read -r -p "请将鼠标移至需要点击的位置，然后按下回车键获取鼠标坐标。";
 
